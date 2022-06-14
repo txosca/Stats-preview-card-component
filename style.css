@@ -1,0 +1,139 @@
+body {
+	font-family: 'Lexend Deca', sans-serif;
+	color:hsl(180, 5%, 96%);
+    background-color: hsl(233, 47%, 7%)
+}
+
+.card {
+    display: flex;
+	width: 900px;
+    height: 350px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	background-color:hsl(244, 38%, 16%);
+    border-radius: 8px;
+	text-align: left;
+}
+
+.card img {
+    height: 350px; /*423.77*/
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    opacity: 0.4;
+    filter: contrast(120%);
+}
+
+.blended {
+    height: 350px;
+    background-image: src="./images/image-header-desktop.jpg";
+    background-color: hsl(277, 64%, 61%);
+    background-blend-mode: multiply;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+
+.title {
+    font-size: 30px;
+    padding: 60px 60px 20px 50px;
+    line-height: 1.2;
+}
+
+.purple {
+    color: hsl(277, 64%, 61%);
+    background: none;
+    font-weight: 800;
+}
+
+.paragraph {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    padding: 0px 100px 30px 50px;
+    line-height: 1.6;
+    color: hsl(244, 8%, 59%);
+}
+
+.flex-parent {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 100px 30px 50px;
+    font-size: 20px;
+}
+
+.tag {
+    font-size: 10px;
+    color: hsl(244, 8%, 59%);
+    margin-top: 5px;
+}
+
+.flex-child {
+    width: 80px;
+    height: 60px;
+}
+
+.attribution {
+    margin-bottom: 10px;
+	font-size: 8px;
+	position: fixed;
+	bottom: 30px;
+	text-align: center;
+  	left: 50%;
+  	transform: translate(-50%);
+    color: white;
+}
+
+@media(max-width: 768px) {
+
+
+    .card img {
+        height: auto; 
+        max-width: 350px; 
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+        border-bottom-right-radius: 0;
+    }
+    
+
+    .blended {
+        height: auto; 
+        max-width: 350px;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+        border-bottom-right-radius: 0;
+    }
+    
+    .card {
+        width: 350px;
+        height: 1000px;
+        flex-direction: column-reverse;
+    }
+
+    .title {
+        text-align: center;
+        padding: 30px 40px 0px 40px;
+    }
+
+    .paragraph {
+        text-align: center;
+        padding: 20px 40px 20px 40px;
+        font-size: 15px;
+    }
+
+    .flex-parent {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 50px 30px 50px;
+        font-size: 25px;
+    }
+
+    .flex-child {
+        text-align: center;
+    }
+
+    .attribution {
+        position: relative;
+        margin-top: 1000px;
+    }
+}
